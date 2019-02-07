@@ -6,9 +6,9 @@ ENV LANG C.UTF-8
 RUN apk add --no-cache openjdk8-jre wget 
 
 WORKDIR /data
-RUN wget https://blueforcer.de/downloads/awtrix.jar
+RUN wget -O awtrix.jar https://blueforcer.de/downloads/awtrix.jar 
 
-COPY run.sh /data
-RUN chmod a+x /data/run.sh
+COPY run.sh /
+RUN chmod a+x /run.sh
 
-CMD ["/data/run.sh"]
+CMD ["/run.sh"]
