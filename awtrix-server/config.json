@@ -1,0 +1,16 @@
+{
+  "name": "AWTrix Server",
+  "version": "0.1",
+  "slug": "awtrix",
+  "description": "AWTrixserver",
+  "startup": "system",
+  "boot": "auto",
+  "webui":"http://[HOST]:[PORT:7000]",
+  "ports": {
+    "7000/tcp": 7000,
+    "7001/tcp": 7001,
+    "7002/tcp": 7002
+  },
+  "options": { "log_level": "info"},
+  "schema": {}
+}
