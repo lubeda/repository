@@ -3,12 +3,16 @@ FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache openjdk8-jre wget 
+RUN apk add --no-cache openjdk8-jre wget
+# RUN mkdir /opt
 
-WORKDIR /
-RUN wget -O awtrix.jar https://blueforcer.de/downloads/awtrix.jar 
-
-COPY run.sh /
+ADD run.sh /
+ADD datastore /
+ADD https://blueforcer.de/downloads/awtrix.jar /
 RUN chmod a+x /run.sh
 
-CMD ["/run.sh"]
+EXPOSE 7000
+EXPOSE 7001
+EXPOSE 7002
+
+ENTRYPOINT [ "bash","/run.sh" ]

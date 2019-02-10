@@ -1,8 +1,9 @@
 {
-  "name": "AWTrix Server",
-  "version": "0.1",
+  "name": "AWTRIX 2.0 Server addon",
+  "version": "0.0.1",
   "slug": "awtrix",
-  "description": "AWTrixserver",
+  "description": "AWTRIX 2.0",
+  "url": "https://docs.blueforcer.de/#/v2/mqtt",
   "startup": "system",
   "boot": "auto",
   "webui":"http://[HOST]:[PORT:7000]",
@@ -11,6 +12,13 @@
     "7001/tcp": 7001,
     "7002/tcp": 7002
   },
-  "options": { "log_level": "info"},
-  "schema": {}
+  "options": { 
+  },
+  "schema": {
+    "mqtt_server": "str?",
+    "mqtt_user": "str?",
+	"mqtt_port": "int?",
+    "mqtt_pass": "str?"
+  }
 }
+
