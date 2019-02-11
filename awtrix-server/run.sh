@@ -1,11 +1,11 @@
 #!/usr/bin/with-contenv bash
 
 folder="/data/config"
-if [ -d "$file" ]
+if [ -d "$folder" ]
 then
-	echo "$file found."
+	echo "$folder found."
 else
-    echo "$file not found."
+    echo "$folder not found."
     echo "mkdir"
     mkdir /data/config
     mkdir /data/plugins
