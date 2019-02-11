@@ -1,6 +1,6 @@
 {
   "name": "AWTRIX 2.0 Server addon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "slug": "awtrix",
   "description": "AWTRIX 2.0",
   "url": "https://docs.blueforcer.de/#/v2/mqtt",
