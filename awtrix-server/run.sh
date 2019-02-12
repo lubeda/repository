@@ -15,5 +15,6 @@ else
     cp /datastore /data/config
 fi
 echo "Starting"
+cd /data
 java -jar /awtrix.jar
 
