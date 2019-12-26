@@ -1,7 +1,6 @@
 {
   "name": "AWTRIX 2.0 Server addon",
-  "version": "0.0.6",
-  "arch": ["armhf", "amd64"],
+  "version": "0.0.4",
   "slug": "awtrix",
   "description": "AWTRIX 2.0",
   "url": "https://docs.blueforcer.de/#/v2/api",
@@ -10,7 +9,8 @@
   "webui":"http://[HOST]:[PORT:7000]",
   "ports": {
     "7000/tcp": 7000,
-    "7001/tcp": 7001
+    "7001/tcp": 7001,
+    "7002/tcp": 7002
   },
   "options": { 
   },
