@@ -6,10 +6,11 @@ WORKDIR /data
 RUN apk add --no-cache openjdk8-jre wget
 # RUN mkdir /opt
 #ADD https://blueforcer.de/awtrix/nightly/awtrix.jar /
+https://blueforcer.de/downloads/awtrix.jar
 
 ADD run.sh /
 ADD datastore /
-ADD https://blueforcer.de/awtrix/beta/awtrix.jar /
+ADD https://blueforcer.de/downloads/awtrix.jar /
 RUN chmod a+x /run.sh
 
 EXPOSE 7000
