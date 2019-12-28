@@ -9,7 +9,7 @@ RUN apk add --no-cache openjdk8-jre wget
 
 ADD run.sh /
 ADD datastore /
-ADD https://blueforcer.de/downloads/awtrix.jar /
+ADD https://blueforcer.de/awtrix/beta/awtrix.jar /
 RUN chmod a+x /run.sh
 
 EXPOSE 7000
