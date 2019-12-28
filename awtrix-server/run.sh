@@ -1,6 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 folder="/data/config"
+
 if [ -d "$folder" ]
 then
 	echo "$folder found."
@@ -14,7 +15,19 @@ else
     ln -s /data/plugins /plugins
     cp /datastore /data/config
 fi
+file="/data/logs.txt"
+
+if [ -f "$file" ]
+then
+    echo "$file exists"
+else
+    echo "create logs.txt"
+    touch $file
+fi
+
 echo "Starting"
 cd /data
-java -jar /awtrix.jar
+java -jar /awtrix.jar &
+tail -f $file
+
 
