@@ -16,8 +16,7 @@
     "lang":"en_EN"
   },
   "schema": {
-    "lang": "str?",
-	"build": "match(beta|nightly|stable)"
+    "lang": "str?"
   }
 }
 
