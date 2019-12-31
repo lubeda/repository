@@ -32,7 +32,7 @@ fi
 bashio::log.info "Starting"
 
 cd /data
-/usr/bin/java -jar /$(bashio::config 'build').jar &
+/usr/bin/java -jar /beta.jar &
 tail -f $file
 
 

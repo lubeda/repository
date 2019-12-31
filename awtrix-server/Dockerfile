@@ -12,8 +12,8 @@ COPY rootfs /
 
 ADD datastore /
 ADD https://blueforcer.de/awtrix/beta/awtrix.jar /beta.jar
-ADD https://blueforcer.de/awtrix/nightly/awtrix.jar /nightly.jar
-ADD https://blueforcer.de/downloads/awtrix.jar /stable.jar
+#ADD https://blueforcer.de/awtrix/nightly/awtrix.jar /nightly.jar
+#ADD https://blueforcer.de/downloads/awtrix.jar /stable.jar
 
 EXPOSE 7000
 EXPOSE 7001
