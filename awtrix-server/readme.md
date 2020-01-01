@@ -6,6 +6,7 @@ since version 0.0.7 you can configure:
 |---|---|---|
 |lang|en_EN| the language used e.g. for the DayOfTheWeeK App set "de_DE" for german|
 
+since version 0.0.8 you can use the serial-ports from your hassio host:
 Access the server with the ip from your hass.io system with port 7000!
 So usually http://hassio.local:7000
 
