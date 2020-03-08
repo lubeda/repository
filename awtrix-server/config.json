@@ -1,6 +1,6 @@
 {
   "name": "AWTRIX 2.0 Server addon",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "arch": ["armhf", "amd64"],
   "slug": "awtrix",
   "description": "AWTRIX 2.0",

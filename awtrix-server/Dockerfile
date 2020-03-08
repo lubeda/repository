@@ -15,7 +15,7 @@ ADD https://blueforcer.de/awtrix/beta/awtrix.jar /beta.jar
 ADD https://blueforcer.de/awtrix/nightly/awtrix.jar /nightly.jar
 ADD https://blueforcer.de/awtrix/stable/awtrix.jar /stable.jar
 
-ADD run.sh /
+# ADD run.sh /
 
 EXPOSE 7000
 EXPOSE 7001

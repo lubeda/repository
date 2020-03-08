@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bashio
 
+bashio::log.info "Addon Version 0.1.4 (user.sh)"
+
 folder="/data/config"
 
 if [ -d "$folder" ]
@@ -29,10 +31,10 @@ if bashio::config.exists 'lang'; then
     export LANG=${lang}
 fi
 
-bashio::log.info "Starting"
-
 cd /data
-/usr/bin/java -jar /beta.jar &
+awtrix=$(bashio::config 'build')
+bashio::log.info "Starting release ${awtrix}..."
+/usr/bin/java -jar /$(bashio::config 'build').jar &
 tail -f $file
 
 
