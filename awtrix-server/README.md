@@ -12,6 +12,10 @@ You can configure:
 ### Version 0.0.8 
 You now can use the serial-ports from your hassio host
 
+### Version 0.1.0 
+First version with Awtrix 2.0 stable
+
+
 ## Usage
 Access the server with the ip from your hass.io system with port 7000!
 So usually http://hassio.local:7000
