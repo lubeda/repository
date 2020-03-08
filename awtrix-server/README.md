@@ -7,7 +7,9 @@ You can configure:
 |option|default|usage|
 |---|---|---|
 |lang|`en_EN`| the language used e.g. for the DayOfTheWeeK App set "de_DE" for german|
-|build|`beta`| which "build" to use, on rebuild of the add-on the actual jar file will be downloaded from blueforcer|
+|build|`beta`| which "build" to use, on rebuild of the add-on the actual jar file will be downloaded from blueforcer. Valid values are: -stable
+-beta
+-nighlty|
 
 ### Version 0.0.8 
 You now can use the serial-ports from your hassio host
