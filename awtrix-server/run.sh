@@ -29,9 +29,9 @@ if bashio::config.exists 'lang'; then
     export LANG=${lang}
 fi
 
-bashio::log.info "Starting"
-
 cd /data
+build = $(bashio::config 'build')
+bashio::log.info bashio::log.info "Starting ${build}..."
 /usr/bin/java -jar /$(bashio::config 'build').jar &
 tail -f $file
 
