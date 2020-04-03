@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 
-bashio::log.info "Addon Version 0.1.4 (user.sh)"
+bashio::log.info "Addon Version 0.1.5 (awtrix 2.0 stable)"
 
 folder="/data/config"
 
@@ -32,9 +32,8 @@ if bashio::config.exists 'lang'; then
 fi
 
 cd /data
-awtrix=$(bashio::config 'build')
-bashio::log.info "Starting release ${awtrix}..."
-/usr/bin/java -jar /$(bashio::config 'build').jar &
+bashio::log.info "Starting awtrix..."
+/usr/bin/java -jar /awtrix.jar &
 tail -f $file
 
 

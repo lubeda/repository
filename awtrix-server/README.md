@@ -1,8 +1,11 @@
 **This is a beta release of the addon, use at your own risk**
 
 ## Changes
-### Version 0.1.1
-changes to run.sh
+### Version 0.1.5
+change to awtrix stable
+
+### Version 0.1.2
+changes to run.sh/user.sh
 
 ### Version 0.1.0 
 First version with Awtrix 2.0 stable

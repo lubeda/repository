@@ -1,6 +1,6 @@
 {
   "name": "AWTRIX 2.0 Server addon",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "arch": ["armhf", "amd64"],
   "slug": "awtrix",
   "description": "AWTRIX 2.0",
@@ -19,12 +19,10 @@
     
   },
   "options": { 
-    "lang":"en_EN",
-	  "build": "stable"
+    "lang":"en_EN"
   },
   "schema": {
-    "lang": "str?",
-    "build":"match(beta|nightly|stable)?"
+    "lang": "str?"
   }
 }
 
