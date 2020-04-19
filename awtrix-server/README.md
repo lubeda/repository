@@ -23,7 +23,5 @@ So usually http://hassio.local:7000
 |option|default|usage|
 |---|---|---|
 |lang|`en_EN`| the language used e.g. for the DayOfTheWeeK App set "de_DE" for german|
-|build|`stable`| which "build" to use, on rebuild of the add-on the actual jar file will be downloaded from blueforcer. Valid values are: <ul><LI>stable</LI><LI>beta</LI><LI>nighlty</LI><UL>|
-
 
 See [awtrix homepage](https://docs.blueforcer.de/#/v2/README) for more details
