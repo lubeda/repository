@@ -14,8 +14,9 @@ ADD datastore /
 ADD https://blueforcer.de/awtrix/beta/awtrix.jar /awtrix.jar
 #ADD https://blueforcer.de/awtrix/stable/awtrix.jar /awtrix.jar
 
-EXPOSE 7000
-EXPOSE 7001
+EXPOSE 7000/tcp
+EXPOSE 7001/tcp
+EXPOSE 5568/udp
 
 CMD ["bashio" , "/run.sh"]
 

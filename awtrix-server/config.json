@@ -1,22 +1,23 @@
 {
-  "name": "AWTRIX 2.0 Server addon",
-  "version": "0.1.5",
+  "name": "AWTRIX 2.x Beta Server",
+  "version": "0.1.8",
   "arch": ["armhf", "amd64"],
   "slug": "awtrix",
   "description": "AWTRIX 2.0",
   "url": "https://awtrixdocs.blueforcer.de/#/",
   "startup": "system",
   "boot": "auto",
-  "auto_uart": true,
+  "auto_uart": false,
   "webui":"http://[HOST]:[PORT:7000]",
   "ports": {
     "7000/tcp": 7000,
-    "7001/tcp": 7001
+    "7001/tcp": 7001,
+    "5568/udp": 5568
   },
   "ports_description": {
     "7000/tcp": "Awtrix web interface",
-    "7001/tcp": "Awtrix communication matrix <-> server"
-    
+    "7001/tcp": "Awtrix communication matrix <-> server",
+    "5568/udp": "E1.31 Communication (premium only)"
   },
   "options": { 
     "lang":"en_EN"

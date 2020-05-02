@@ -1,6 +1,9 @@
 **This is a beta release of the addon, use at your own risk**
 
 ## Changes
+### Version 0.1.8
+change to awtrix beta
+
 ### Version 0.1.5
 change to awtrix stable
 
