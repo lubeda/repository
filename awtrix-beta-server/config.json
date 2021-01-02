@@ -1,0 +1,29 @@
+{
+  "name": "AWTRIX 2.x Beta Server",
+  "version": "0.2.3",
+  "arch": ["armhf", "amd64"],
+  "slug": "awtrix_beta",
+  "description": "AWTRIX 2.x Beta",
+  "url": "https://awtrixdocs.blueforcer.de/#/",
+  "startup": "system",
+  "ingress": true,
+  "boot": "auto",
+  "auto_uart": false,
+  "ports": {
+    "7001/tcp": 7001,
+    "5568/udp": 5568
+  },
+  "map": ["share:rw"],
+  "ports_description": {
+    "7001/tcp": "communication matrix <-> server",
+    "5568/udp": "E1.31 Communication (premium only)"
+  },
+  "stage":"experimental",
+    "options": { 
+      "lang": "en"
+  },
+  "schema": {
+    "lang": "str"
+  }
+}
+
