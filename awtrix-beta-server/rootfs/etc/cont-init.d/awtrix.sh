@@ -1,31 +1,35 @@
 #!/usr/bin/with-contenv bashio
 
-bashio::log.info "Addon Version 0.2.3 (Awtrix 2.0 beta)"
+runfolder="/data"
+datafolder="/config"
 
-folder="/share/Awtrix"
-settingsfile="/share/Awtrix/config/settings.json"
+bashio::log.info "Addon Version 0.2.4 (Awtrix 2.0 beta)"
 
-if bashio::fs.directory_exists "${folder}"; then
-	bashio::log.info "$folder found."
+if bashio::fs.directory_exists "${datafolder}"; then
+    if ! bashio::fs.directory_exists "${datafolder}/awtrix"; then
+      mkdir "${datafolder}/awtrix"
+      bashio::log.info "mkdir /config/awtrix"
+    fi
+    if ! bashio::fs.directory_exists "${datafolder}/awtrix/config"; then
+      mkdir "${datafolder}/awtrix/config"
+      bashio::log.info "mkdir /config/awtrix/config"
+    fi   
+    if ! bashio::fs.directory_exists "${datafolder}/awtrix/apps"; then
+      mkdir "${datafolder}/awtrix/apps"
+      bashio::log.info "mkdir /config/awtrix/apps"
+    fi
+    if ! bashio::fs.directory_exists "${runfolder}/Apps"; then
+      ln -s "${datafolder}/awtrix/apps" "${runfolder}/Apps"
+      bashio::log.info "ln -s Apps"
+    fi
+    if ! bashio::fs.directory_exists "${runfolder}/config"; then
+      ln -s "${datafolder}/awtrix/config" "${runfolder}/config"
+      bashio::log.info "ln -s" "${datafolder}/awtrix/config" "${runfolder}/config"
+    fi
 else
-    bashio::log.info  "$folder not found."
-    mkdir /share/Awtrix
-fi 
-
-#if bashio::fs.directory_exists "${folder}/config"; then
-#     echo "$folder/config already there"
-#else
-#    mkdir /share/Awtrix/config
-#fi
-
-#if bashio::fs.file_exists "${settingsfile}"; then
-#     echo "$settingsfile already there > merging"
-#     jq -s 'add' $settingsfile /data/options.json > $settingsfile
-#else
-#     cp /data/options.json $settingsfile
-#     echo "initial $settingsfile copied"
-#fi
-#chmod 0666 $settingsfile
+  bashio::log.error "No /config folder"
+  exit 
+fi
 
 if bashio::config.exists 'lang'; then
     lang=$(bashio::config 'lang')
@@ -33,9 +37,15 @@ if bashio::config.exists 'lang'; then
     export LANG=${lang}
 fi
 
-cd $folder
+cd $runfolder
 
-bashio::log.info "Starting awtrix..."
-exec /usr/bin/java -jar /awtrix.jar --logger=stdout &
+version=$(bashio::config 'version')
+bashio::log.warning "removing option.json"
+rm /data/options.json
+
+bashio::log.info "Starting awtrix (${version})..."
+
+exec /usr/bin/java -jar /$version.jar --logger=stdout &
+
 
 

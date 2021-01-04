@@ -1,3 +1,4 @@
+version 0.2.4 tested with Beta 2025 export to /config folder
 version 0.2.3 tested with Beta 2024
 version 0.1.8 version with new 2.x beta server
 version 0.1.5 version with new 2.0 stable server
