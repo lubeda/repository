@@ -1,3 +1,4 @@
+version 0.2.6 disabled hassio-detexction from awtrix server
 version 0.2.5 tested with Beta 2025 removed support for Raspi (sorry about that) because  there is no openjdk11-jre apk for it
 version 0.2.4 tested with Beta 2025 export to /config folder
 version 0.2.3 tested with Beta 2024

@@ -3,7 +3,7 @@
 runfolder="/data"
 datafolder="/config"
 
-bashio::log.info "Addon Version 0.2.4 (Awtrix 2.0 beta)"
+bashio::log.info "Addon Version 0.2.6 (Awtrix 2.0 beta)"
 
 if bashio::fs.directory_exists "${datafolder}"; then
     if ! bashio::fs.directory_exists "${datafolder}/awtrix"; then
@@ -40,8 +40,9 @@ fi
 cd $runfolder
 
 version=$(bashio::config 'version')
-bashio::log.warning "removing option.json"
-rm /data/options.json
+
+bashio::log.warning "disabling hassio-detection"
+export SUPERVISOR_TOKEN=-1
 
 bashio::log.info "Starting awtrix (${version})..."
 
