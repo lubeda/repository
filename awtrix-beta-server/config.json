@@ -10,7 +10,7 @@
   "ingress": true,
   "boot": "auto",
   "panel_icon": "mdi:solar-panel-large",
-  "auto_uart": false,
+  "uart": false,
   "ports": {
 	"7000/tcp": 7000,
     	"7001/tcp": 7001,
