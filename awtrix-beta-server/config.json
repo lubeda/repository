@@ -1,6 +1,6 @@
 {
   "name": "AWTRIX 2.x Beta Server",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "arch": ["amd64"],
   "slug": "awtrix_beta",
   "description": "AWTRIX 2.x Beta",
